@@ -1,5 +1,5 @@
 # Enter your code here. Read input from STDIN. Print output to STDOUT
-
+from fractions import Fraction
 def calc(wx,bx,wy,by):
     # a white ball is drawn from bag x
     p1 = wx/(wx+bx)
@@ -11,7 +11,6 @@ def calc(wx,bx,wy,by):
 
     # total probability
     pf = p11*p1 + p22*p2
-
-    print(pf)
+    print(Fraction(pf).limit_denominator())
 
 calc(5,4,7,6)
